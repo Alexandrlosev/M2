@@ -6,19 +6,27 @@ import java.util.Scanner;
 public class RoadController
 {
     private static double passengerCarMaxWeight = 3500.0; // kg
+    //Переменная double
     private static int passengerCarMaxHeight = 2000; // mm
+    //Переменная int
     private static int controllerMaxHeight = 4000; // mm
+    //Переменная int
 
     private static int passengerCarPrice = 100; // RUB
+    //Переменная int
     private static int cargoCarPrice = 250; // RUB
+    //Переменная int
     private static int vehicleAdditionalPrice = 200; // RUB
+    //Переменная int
 
     public static void main(String[] args)
+        //Переменная String
     {
         System.out.println("Сколько автомобилей сгенерировать?");
 
         Scanner scanner = new Scanner(System.in);
         int carsCount = scanner.nextInt();
+        //Переменная int
 
         for(int i = 0; i < carsCount; i++)
         {
@@ -33,6 +41,7 @@ public class RoadController
 
             //Проверяем высоту и массу автомобиля, вычисляем стоимость проезда
             int price = calculatePrice(car);
+            //Переменная int
             if(price == -1) {
                 continue;
             }
@@ -56,6 +65,7 @@ public class RoadController
         else if (carHeight > passengerCarMaxHeight)
         {
             double weight = car.weight;
+            //Переменная double
             //Грузовой автомобиль
             if (weight > passengerCarMaxWeight)
             {
@@ -79,6 +89,7 @@ public class RoadController
      * Открытие шлагбаума
      */
     private static void openWay()
+        //Переменная void
     {
         System.out.println("Шлагбаум открывается... Счастливого пути!");
     }
@@ -87,6 +98,8 @@ public class RoadController
      * Сообщение о невозможности проезда
      */
     private static void blockWay(String reason)
+        //Переменная String
+        //Переменная void
     {
         System.out.println("Проезд невозможен: " + reason);
     }
